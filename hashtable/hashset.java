@@ -1,11 +1,9 @@
 import java.util.LinkedList;
 
 class MyHashSet {
-  // fields
   private Bucket[] bucketArray;
   private int keyRange;
 
-  // constructor
   public MyHashSet() {
     // Use prime number for base
     this.keyRange = 729;
