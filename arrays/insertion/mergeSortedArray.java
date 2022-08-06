@@ -1,4 +1,6 @@
+package insertion;
 // Solution 1 
+
 // import java.util.Arrays;
 // class mergeSortedArray {
 //   public void merge(int[] nums1, int m, int[] nums2, int n) {

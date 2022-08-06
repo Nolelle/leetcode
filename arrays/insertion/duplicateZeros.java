@@ -1,3 +1,5 @@
+package insertion;
+
 class Solution {
   public void duplicateZeros(int[] arr) {
     int extraZeros = 0;
