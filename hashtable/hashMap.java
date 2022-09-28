@@ -1,35 +1,35 @@
 class Pair<U, V> {
-  public U first;
-  public V second;
+    public U first;
+    public V second;
 
-  public Pair(U first, V second) {
-    this.first = first;
-    this.second = second;
-  }
+    public Pair(U first, V second) {
+        this.first = first;
+        this.second = second;
+    }
 }
 
 class Bucket {
-  private List<Pair<Integer, Integer>> bucket;
+    private List<Pair<Integer, Integer>> bucket;
 
-  public Bucket() {
+    public Bucket() {
 
-  }
+    }
 }
 
 class myHashMap {
-  public myHashMap() {
+    public myHashMap() {
 
-  }
+    }
 
-  public void put(int key, int value) {
+    public void put(int key, int value) {
 
-  }
+    }
 
-  public int get(int key) {
+    public int get(int key) {
 
-  }
+    }
 
-  public void remove(int keyl) {
+    public void remove(int keyl) {
 
-  }
+    }
 }
