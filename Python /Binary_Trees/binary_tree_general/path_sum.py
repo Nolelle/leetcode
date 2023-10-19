@@ -9,4 +9,17 @@ class TreeNode:
 
 
 class Solution:
-    sum = 0
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        # base case
+        if root is None:
+            return False
+
+        # recursive case
+        targetSum -= root.val
+
+        if root.left is None and root.right is None:
+            return targetSum == 0
+
+        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(
+            root.right, targetSum
+        )
