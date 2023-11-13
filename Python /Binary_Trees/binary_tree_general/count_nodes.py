@@ -21,7 +21,6 @@ class Solution:
         # we can do this by traversing the left most nodes till we find None
         count = 0
         height = 0
-        height += self.find_height(root.left, height)
-        count += 2**height - 1
-
+        height += 1self.find_height(root.left, height)
         # then using the height, we can use that info decide whether or not we count
+        
