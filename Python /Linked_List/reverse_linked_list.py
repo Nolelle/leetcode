@@ -8,26 +8,16 @@ class ListNode:
         self.next = next
 
 
-# returns the head of a linked list
-def create_linked_lists(elements):
-    dummy_head = ListNode()
-    current = dummy_head
-    for value in elements:
-        current.next = ListNode(value)
-        current = current.next
-    return dummy_head.next
-
-
-# recursive solution
+# iterative solution
 class Solution:
     def recursiveReverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        # base case
-        if not head or not head.next:
-            return head
-        # recursive case
-        reversed_head = self.recursiveReverseList(head.next)
-        
+        prev = None
+        current = head
 
+        while current:
+            next_temp = current.next
+            current.next = prev
+            prev = current
+            current = next_temp
 
-obj = Solution()
-print(obj.recursiveReverseList(create_linked_lists([1, 2, 3, 4, 5])))
+        return prev
