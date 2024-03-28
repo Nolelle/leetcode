@@ -23,8 +23,11 @@ class Solution:
         n = self.lengthOfLinkedList(head)
         count = 0
 
+        # empty list
         if not head or not head.next:
             return None
+
+        # edge cases 
         if n == 1 or n == 2:
             return head.next
 
