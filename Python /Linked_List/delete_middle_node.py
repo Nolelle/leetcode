@@ -27,7 +27,7 @@ class Solution:
         if not head or not head.next:
             return None
 
-        # edge cases 
+        # edge cases
         if n == 1 or n == 2:
             return head.next
 
