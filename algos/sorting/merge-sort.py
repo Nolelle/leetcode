@@ -43,3 +43,8 @@ def merge_sort(arr):
             k += 1
 
     return arr
+
+
+test = [64, 25, 12, 22, 11]
+
+print(merge_sort(test))
