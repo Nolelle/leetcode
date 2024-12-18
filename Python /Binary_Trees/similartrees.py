@@ -9,7 +9,7 @@ class TreeNode:
 
 
 class Solution:
-    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> pyenv --versionbool:
+    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         leaf1 = []
         leaf2 = []
 
