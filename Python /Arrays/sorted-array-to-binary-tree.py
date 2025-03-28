@@ -1,4 +1,6 @@
 from typing import List, Optional
+from collections import deque
+
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -12,13 +14,50 @@ class Solution:
         # empty array
         if not nums:
             return None
-        
-        # find the middle index
+
         mid = len(nums) // 2
-        # array is sorted so make mid root
-        root = TreeNode(nums[mid])
+        root = TreeNode(val = nums[mid])
+        root.left = self.sortedArrayToBST(nums[:mid])
+        root.right = self.sortedArrayToBST(nums[mid+1:])
+
+        return root
+
+
+    # Visualizing the process with que.
+    def treeToList(self, root: Optional[TreeNode]) -> List[Optional[int]]:
+        if not root:
+            return []
+
+        result = []
+        queue: deque[Optional[TreeNode]] = deque([root])
+
+        while queue:
+            node = queue.popleft()
+            if node:
+                result.append(node.val)
+                queue.append(node.left)
+                queue.append(node.right)
+            else:
+                result.append(None)
+
+        while result and result[-1] is None:
+            result.pop()
+
+        return result
 
 
 
 
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
