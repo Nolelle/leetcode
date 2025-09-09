@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/edmundyu/leetcode/c++/Arrays/max_element'
-relocations:     []
-...
